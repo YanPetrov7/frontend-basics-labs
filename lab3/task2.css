@@ -1,0 +1,43 @@
+html, body {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    font-size: 18px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+#img-1 {
+    background-color: plum;
+    width: 50%;
+    height: 36%;
+    float: left;
+}
+
+#text-1 {
+    background-color: rgb(16, 114, 219);
+    width: 50%;
+    height: 36%;
+    float: right;
+}
+
+#text-2 {
+    background-color: rgb(53, 199, 253);
+    width: 100%;
+    height: 32%;
+    float: right;
+}
+
+#img-2 {
+    background-color: rgb(16, 114, 219);
+    width: 100%;
+    height: 32%;
+    float: right;
+}
+
+img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
