@@ -36,4 +36,16 @@ input {
     border-radius: 4px;
     cursor: pointer;
 }
+
+#colorfulTable {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 20px;
+}
+  
+#colorfulTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
   

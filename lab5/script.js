@@ -51,4 +51,52 @@ document.addEventListener("DOMContentLoaded", () => {
           );
       }
   });
+
+  // task2
+  const table = document.getElementById("colorfulTable");
+
+  const fillTable = () => {
+    let counter = 1;
+
+    for (let i = 0; i < 6; i++) {
+      const row = table.insertRow();
+
+      for (let j = 0; j < 6; j++) {
+        const cell = row.insertCell();
+        cell.textContent = counter++;
+      }
+    }
+  }
+
+  const randomColor = () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return "#" + randomColor;
+  }
+
+  fillTable();
+
+  const twelfthElement = table.rows[1].cells[5];
+  let randColor;
+
+  const handleMouseOut = (e) => {
+    e.target.style.backgroundColor = "white";
+  }
+
+  twelfthElement.addEventListener("mouseover", () => {
+    randColor = randomColor()
+    twelfthElement.style.backgroundColor = randColor;
+    twelfthElement.addEventListener("mouseout", handleMouseOut);
+  });
+
+  twelfthElement.addEventListener("click", () => {
+    twelfthElement.removeEventListener("mouseout", handleMouseOut);
+    twelfthElement.style.backgroundColor = randColor;
+  });
+
+  twelfthElement.addEventListener("dblclick", () => {
+    for (let i = 0; i < table.rows.length; i++) {
+      const cell = table.rows[i].cells[1]; 
+      cell.style.backgroundColor = randColor;
+    }
+  });
 });
